@@ -1,0 +1,143 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background-image: url(./img/background.jpg);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2); /* 白っぽく薄くする場合 */
+  z-index: -1; /* bodyより下に配置 */
+}
+.app {
+  max-width: 1000px;
+  width: 100%;
+  background: #feeaf0;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  font-family: "Comic Sans MS";
+  text-align: center;
+  color: #ff6f91;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#word,
+#meaning,
+#memo {
+  height: 40px;
+}
+#wordForm {
+  padding-bottom: 20px;
+  gap: 20px;
+}
+
+input,
+textarea,
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input,
+textarea {
+  background-color: #fff;
+}
+
+button {
+  background-color: #ff6f91;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff8fa3;
+}
+
+#search {
+  margin: 20px 0;
+}
+
+#wordList {
+  list-style: none;
+  padding: 0;
+}
+
+.word-item {
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.word-item button {
+  margin-top: 5px;
+  margin-right: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+@media screen and (max-width: 430px) {
+  .app {
+    margin: 25px;
+  }
+  #word,
+  #meaning,
+  #memo {
+    height: 40px;
+  }
+
+  #wordForm {
+    padding-bottom: 20px;
+    gap: 20px;
+  }
+
+  #search {
+    height: 25px;
+  }
+  input,
+  textarea,
+  button {
+    font-size: 14px;
+  }
+
+  .word-item {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
