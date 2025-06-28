@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Wordbook</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>📚 Little Wordbook 🎀</h1>
+
+      <form id="wordForm">
+        <input type="text" id="word" placeholder="単語（英語）" required />
+        <input type="text" id="meaning" placeholder="意味" required />
+        <textarea id="memo" placeholder="メモ"></textarea>
+        <button type="submit">追加する</button>
+      </form>
+
+      <input type="text" id="search" placeholder="単語を検索" />
+
+      <ul id="wordList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
